@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class project1 {
     public static void main(String[] args) {
-        task0();
+        task1();
     }
     static void task0(){
 
@@ -29,4 +29,35 @@ public class project1 {
 
 
     }
+
+    static void task1(){
+        int[] arr = {1, 0, 1, 0, 1, 0, 1, 1, 1};
+        int counte = 0; 
+        int max0nse = 1;
+        for ( int i = 0 ; i < arr.length; i++) {
+            if (arr[i] == 1){
+                counte++;
+            }if(arr[i] == 0 || i == arr.length - 1 ) {
+                if(counte > max0nse){
+                    max0nse = counte;
+                }
+                counte =  0;
+            }   
+        }
+        if(counte > max0nse){
+            max0nse = counte;
+        }
+        System.out.println(max0nse);
+
+    }
+
+
+    static void task2(){
+        
+    }
+
+
+
+
 }
+
