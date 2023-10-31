@@ -1,117 +1,96 @@
-// import java.time.LocalTime;
-// import java.util.ArrayList;
-// import java.util.Arrays;
-// import java.util.Scanner;
-
-// public class project1 {
-//     public static void main(String[] args) {
-//         task0();
-//     }
-//     static void task0(){
-//         System.out.println("Как тебя зовут?");
-//         Scanner scanner = new Scanner(System.in);
-//         String name = scanner.nextLine();
-        
-//         LocalTime LocalTime = java.time.LocalTime.now();
-//         int hour = LocalTime.getHour();
-//         System.out.println(hour);
-
-//         if(hour >= 5 && hour < 12){ 
-//             System.out.println("Доброе утро," + name);
-//         }else if ( hour < 18) {
-//            System.out.println("Добрый день," + name); 
-//         }else if ( hour < 23) {
-//            System.out.println("Добрый вечер," + name);
-//         }else {
-//             System.out.println("Доброй ночи," + name);
-//         } 
-//         scanner.close();
-//     }
-// }
-
-    // static void task1(){
-    //     int[] arr = {1, 0, 1, 0, 1, 0, 1, 1, 1};
-    //     int counte = 0; 
-    //     int max0nse = 1;
-    //     for ( int i = 0 ; i < arr.length; i++) {
-    //         if (arr[i] == 1){
-    //             counte++;
-    //         }if(arr[i] == 0 || i == arr.length - 1 ) {
-    //             if(counte > max0nse){
-    //                 max0nse = counte;
-    //             }
-    //             counte =  0;
-    //         }   
-    //     }
-    //     if(counte > max0nse){
-    //         max0nse = counte;
-    //     }
-    //     System.out.println(max0nse);
-
-    // }
+ /*
+ Задача 64: Задайте значения N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1.
+ N = 5. -> "5, 4, 3, 2, 1"
+ N = 8. -> "8, 7, 6, 5, 4, 3, 2, 1"
+ */
+ 
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+NaturalToLow(number, count);
 
 
-   
+void NaturalToLow(int n, int count)
+{
+    if (count > n)
+    {
+        return;
+    }
+    else
+    {
+ NaturalToLow(n, count + 1);
+ Console.Write(count + " ");
+    }
+}
+
+ /*
+ Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+ M = 1; N = 15 -> 120
+ M = 4; N = 8. -> 30
+ */
+ 
+Console.Write("Введите число M: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+SumFromMToN(m, n);
+
+// вызов функции "сумма чисел от M до N"
+void SumFromMToN(int m, int n)
+{
+    Console.Write(SumMN(m - 1, n));
+}
+
+// функция сумма чисел от M до N
+int SumMN(int m, int n)
+{
+    int res = m;
+    if (m == n)
+        return 0;
+    else
+    {
+        m++;
+        res = m + SumMN(m, n);
+        return res;
+    }
+}
+
+ /*
+ Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+ m = 2, n = 3 -> A(m,n) = 9
+ m = 3, n = 2 -> A(m,n) = 29
+ */
+ 
+Console.Write("Введите число M: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+AkkermanFunction(m,n);
 
 
-        // public static void main(String[] args) {
-        //     int[] arr = {3,2,5,3};
-        //     int val = 3;
-        //     int[] res = sort(arr, val);
-        //     System.out.println(Arrays.toString(res));
-        // }
-    
-        // static int[] sort(int[] arr, int val){
-        //     int[] res = new int[arr.length];
-        //     Arrays.fill(res, val);
-        //     for (int i = 0, j = 0; i < arr.length; i++) {
-        //         if (arr[i] != val){
-        //             res[j] = arr[i];
-        //             j++;
-        //         }
-        //     }
-        //     return res;
-        // }
-        
-   
-        // public static void main(String[] args){
+// вызов функции Аккермана
+void AkkermanFunction(int m, int n)
+{
+    Console.Write(Akkerman(m, n)); 
+}
 
-        //     String s = "Добро пожаловать на курс по Java";
-        //     String[] words = s.split(" ");
-        //     for (int i = words.length - 1; i >= 0; i --){
-        //         System.out.print(words[i] + " ");
-        //     }
-
-
-        // }
-/*
-    // Реализовать функцию возведения числа а в степень b. a, b из Z. Сводя количество выполняемых действий к минимуму.
-    // Пример 1: а = 3, b = 2, ответ: 9
-    // Пример 2: а = 2, b = -2, ответ: 0.25
-    // Пример 3: а = 3, b = 0, ответ: 1
-    //  */
-    // // public static void main(String[] args) {
-    // //     double a = 0.5;
-    // //     int b = 3;
-    // //     System.out.println(pow(a, b));
-    // // }
-
-    // // static double pow(double a, int b){
-    // //     if (b == 0 || a == 1){
-    // //         return 1;
-    // //     }
-    // //     if (b < 0){
-    // //         a = 1.0 / a;
-    // //         b = -b;
-    // //     }
-    // //     double res = a;
-    // //     for (int i = 1; i < b; i++) {
-    // //         res *= a;
-    // //     }
-    // //     return res;
-    // // }
-
-
-    // }
-
-
+// функция Аккермана
+int Akkerman(int m, int n)
+{
+    if (m == 0)
+    {
+        return n + 1;
+    }
+    else if (n == 0 && m > 0)
+    {
+        return Akkerman(m - 1, 1);
+    }
+    else
+    {
+        return (Akkerman(m - 1, Akkerman(m, n - 1)));
+    }
+}
