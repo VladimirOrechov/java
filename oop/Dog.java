@@ -11,6 +11,6 @@ public class Dog extends Animal{
         super(name, illness, ownerName, birthday);
     }
     public void fly() {
-        System.out.println(getClass().getSimpleName() +  " I Cant Fly");
+        System.out.println(getClass().getSimpleName() +  " I Can not Fly");
     }
 }

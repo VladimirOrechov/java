@@ -11,7 +11,7 @@ public class Cat extends Animal{
         super(name, illness, ownerName, birthday);
     }
     public void fly() {
-        System.out.println(getClass().getSimpleName() +  " I Cant Fly");
+        System.out.println(getClass().getSimpleName() +  " I Can not Fly");
     }
     public void sweem() {
         System.out.println(getClass().getSimpleName() + " I Dont like Sweem");

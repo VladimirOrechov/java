@@ -10,6 +10,6 @@ public class Bird extends Animal{
         super(name, illness, ownerName, birthday);
         }
     public void sweem() {
-        System.out.println(getClass().getSimpleName() + " I Cant Sweem");
+        System.out.println(getClass().getSimpleName() + " I Can not Sweem");
     }
 }
