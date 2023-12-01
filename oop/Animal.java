@@ -56,13 +56,13 @@ public class Animal {
     private void breathe() {
         System.out.println(getClass().getSimpleName() + " breathe");
     }
-    private void toGo () {
+    public void toGo () {
         System.out.println(getClass().getSimpleName() + " Wallk");
     }
-    private void fly() {
+    public void fly() {
         System.out.println(getClass().getSimpleName() +  " Fly");
     }
-    private void sweem() {
+    public void sweem() {
         System.out.println(getClass().getSimpleName() + " Sweem");
     }
     public void liveCicle() {

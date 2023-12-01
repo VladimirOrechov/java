@@ -10,4 +10,10 @@ public class Cat extends Animal{
     public Cat(String name, Illness illness, String ownerName, LocalDate birthday){
         super(name, illness, ownerName, birthday);
     }
+    public void fly() {
+        System.out.println(getClass().getSimpleName() +  " I Cant Fly");
+    }
+    public void sweem() {
+        System.out.println(getClass().getSimpleName() + " I Dont like Sweem");
+    }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Cat cat = new Cat();        // экземпляр класса
-        cat.setName("barsic");  
+        cat.setName("barsic");
         System.out.println(cat.getName());
         Dog dog = new Dog("max", new Chumka("Chumka"), "Petr", LocalDate.of(3, 12, 21));
         System.out.println(dog.getName());
