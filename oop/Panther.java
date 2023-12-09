@@ -13,4 +13,8 @@ public class Panther extends Animal{
     public void fly() {
         System.out.println(getClass().getSimpleName() +  " I Cant Fly");
     }
+    @Override
+    public String getName() {
+        return name;
+    }
 }

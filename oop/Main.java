@@ -18,23 +18,30 @@ public class Main {
         // dog.getIllness().heal();
         // dog.toWakeUp("13:52");
         ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(cat);    
         animals.add(cat);
         animals.add(dog);
         animals.add(fish);
         animals.add(bird);
         animals.add(panther);
 
-        cat.liveCicle();
-        System.out.println("------------");
-        dog.liveCicle();
-        System.out.println("------------");
-        fish.liveCicle();
-        System.out.println("------------");
-        bird.liveCicle();
-        System.out.println("------------"); 
-        panther.liveCicle();
-        System.out.println("------------");
+        VeterenaryClinic clinic = new VeterenaryClinic();
+        clinic.addPatietnt(cat).addPatietnt(dog).addPatietnt(bird).addPatietnt(panther).addPatietnt(fish);
+        System.out.println(clinic.getPatients());
+        System.out.println(clinic.getGoable());
+
+        // cat.liveCicle();
+        // System.out.println("------------");
+        // dog.liveCicle();
+        // System.out.println("------------");
+        // fish.liveCicle();
+        // System.out.println("------------");
+        // bird.liveCicle();
+        // System.out.println("------------"); 
+        // panther.liveCicle();
+        // System.out.println("------------");
         
+        // System.out.println(getRunSpeed);
 
     }
 }

@@ -4,11 +4,12 @@ import java.time.LocalDate;
 /*
  *  calss Animal
  */
-public class Animal { 
-    private String name;  
-    private Illness illness; // болезнь
-    private String ownerName;
-    private LocalDate birthday;
+public abstract class Animal { 
+    private static final String Animal = null;
+    protected String name;  
+    protected Illness illness; // болезнь
+    protected String ownerName;
+    protected LocalDate birthday;
 
     
     public Animal(){
@@ -23,14 +24,13 @@ public class Animal {
         this.birthday = birthday;
     }
 /*
- * поведение объекта
+ * поведение объекта /методы
  */
+    public abstract String getName();
+
     public void setName(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
+    this.name = name;
+}
     public Illness getIllness() {
         return illness;
     }
@@ -39,11 +39,8 @@ public class Animal {
     }
     private void toWakeUp() {
         System.out.println(getClass().getSimpleName() + " Animal wake up");
-
     }
-    // private void toWakeUp(String time) {
-    //     System.out.println(getClass().getSimpleName() + "Animal wake up" + " in " +  time);
-    // }
+
     private void eat() {
         System.out.println(getClass().getSimpleName() + " ate");
     }
@@ -74,10 +71,15 @@ public class Animal {
         toGo();
         fly();
         sweem();
-
     }
-
-    
-    
-
+    public void addPatietnt() {
+    }
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", illness=" + illness + 
+                ", ownername='" + ownerName + '\'' +
+                ", birthday=" + birthday + 
+                '}';
+    }
 }

@@ -2,7 +2,7 @@ package oop;
 
 import java.time.LocalDate;
 
-public class Fish extends Animal{
+public class Fish extends Animal {
     
     public Fish(){
         super();
@@ -12,5 +12,9 @@ public class Fish extends Animal{
     }
     public void fly() {
         System.out.println(getClass().getSimpleName() +  " I Can not Fly");
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 }   
