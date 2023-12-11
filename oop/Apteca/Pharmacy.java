@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 //  описываем лекарства                    перебор компонентов
-public class Pharmacy implements Iterator<PharmacyComponent> {
+public class Pharmacy implements Iterable<PharmacyComponent> {
+   
     // список компанентов
     private List<PharmacyComponent> components = new ArrayList<>();
     private int index = 0;
@@ -16,14 +17,14 @@ public class Pharmacy implements Iterator<PharmacyComponent> {
     List<PharmacyComponent> components() {
         return components();
     }
-    @Override
-    public boolean hasNext() {
-        return index < components.size();
-    }
-    @Override
-    public PharmacyComponent next() {
-        return components.get(index++);
-    }
+    // @Override
+    // public boolean hasNext() {
+    //     return index < components.size();
+    // }
+    // @Override
+    // public PharmacyComponent next() {
+    //     return components.get(index++);
+    // }
     @Override
     public String toString() {
     return "Pharmacy{" +
@@ -32,7 +33,15 @@ public class Pharmacy implements Iterator<PharmacyComponent> {
     '}';
     }
 
-    
+
+    // @Override
+    // public Iterator<PharmacyComponent>  iterator() {
+    //     return new IteratorComponent();
+    // }
+
+
+
+        // Анонимный класс
     @Override
     public Iterator<PharmacyComponent> iterator() {
         return new Iterator<PharmacyComponent>() {
@@ -47,9 +56,13 @@ public class Pharmacy implements Iterator<PharmacyComponent> {
             }
         };
     }
-    public int getIndex() {
-        return 0;
-    }
-
-
+    // public int getIndex() {
+    //     return 0;
+    // }
+    // public List<PharmacyComponent> getComponents() {
+    //     return null;
+    // }
+  
 }
+
+

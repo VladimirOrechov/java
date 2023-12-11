@@ -1,6 +1,6 @@
 package oop.Apteca;
 
-public class PharmacyComponent {
+public class PharmacyComponent implements Comparable<PharmacyComponent>{
     private String name;
     private String weight;
     private int power;
@@ -35,6 +35,16 @@ public class PharmacyComponent {
     ", weight='" + weight + '\'' +
     ", power=" + power +
     '}';
+    }
+    @Override
+    public int compareTo(PharmacyComponent o) {
+        if(power > o.power){
+            return 1;
+        }
+        else if (this.power < o.power){
+            return -1;
+        }
+        return 0;
     }
 }
 

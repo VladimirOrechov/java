@@ -1,32 +1,24 @@
 package oop.Apteca;
 
-mport java.util.*;
+
+import java.util.*;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
-        PharmancyComponent azitronit = new Azitronit("Azitronit", "10 Мг", 50);
-        PharmancyComponent azitronit1 = new Azitronit("Azitronit", "10 Мг", 50);
-        PharmancyComponent pinicilin = new Pinicilin("Pinicilin", "10 Мг", 120);
-        PharmancyComponent water = new Water("Water", "10 Мг", 20);
-        PharmancyComponent water2 = new Water("Water", "10 Мг", 20);
-
-        List<PharmancyComponent> pharmancyComponents = new ArrayList<>();
-        pharmancyComponents.add(azitronit);
-        pharmancyComponents.add(water2);
-        pharmancyComponents.add(water);
-        pharmancyComponents.add(pinicilin);
-
-        System.out.println(pharmancyComponents);
-
-        Collections.sort(pharmancyComponents);
-        System.out.println(pharmancyComponents);
-
-        Pharmacy pharmacy1 = new Pharmacy().addComponent(azitroment).addComponent(water);
+        PharmacyComponent azitronit = new Azitranit("Azitronit", "10 Мг", 50);
+        PharmacyComponent azitronit1 = new Azitranit("Azitronit", "10 Мг", 50);
+        PharmacyComponent pinicilin = (PharmacyComponent) new Pinicilin("Pinicilin", "10 Мг", 120);
+        PharmacyComponent water = new Water("Water", "10 Мг", 20);
+        PharmacyComponent water2 = new Water("Water", "10 Мг", 20);
+        
+        Pharmacy pharmacy1 = new Pharmacy().addComponent(azitronit).addComponent(water).addComponent(pinicilin);
         Pharmacy pharmacy2 = new Pharmacy().addComponent(pinicilin).addComponent(water);
 
-        for (PharmancyComponent comp: pharmacy1) {
+
+        for (PharmacyComponent comp: pharmacy1) {
             System.out.println(comp.getName());
         }
 
@@ -35,26 +27,55 @@ public class Main {
         pharmacies.add(pharmacy2);
 
 
-        Set<PharmancyComponent> set = new HashSet<>();
-        set.add(azitroment);
-        set.add(azitroment1);
-        set.add(azitroment);
+        List<PharmacyComponent> pharmancyComponents = new ArrayList<>();
+        pharmancyComponents.add(azitronit);
+        pharmancyComponents.add(water2);
+        pharmancyComponents.add(water);
+        pharmancyComponents.add(pinicilin);
+        
+        System.out.println(pharmancyComponents);
+
+        Collections.sort(pharmancyComponents);
+        System.out.println(pharmancyComponents);
+        
+        
+        Set<PharmacyComponent> set = new HashSet<>();
+        set.add(azitronit);
+        set.add(azitronit1);
+        set.add(azitronit1);
 
         System.out.println("/////////////////////////");
         System.out.println(set);
 
+        // //  вывод данных в консоль с помощью итератора
+        // Iterator<PharmacyComponent> iterator = pharmacy1;
+        // while (iterator.hasNext()){         // рабочее решение
+        //    System.out.println(iterator.next());
+                // Аналог
+        // }  
+        // while (((Iterator<PharmacyComponent>) pharmacy1).hasNext()) {
+        // System.out.println(((Iterator<PharmacyComponent>) pharmacy1).next());         //Рабочее решение пример
+        // }
+
+
+
+       
+
+
+
+
+        
+
+        // List<Pharmacy> pharmacies = new ArrayList<>();
+        // pharmacies.add(pharmacy1);
+        // pharmacies.add(pharmacy2);
+
+
+        // System.out.println("/////////////////////////");
+        // System.out.println(set);
+
         //Collections.sort(pharmacies, new );
 
-
-        //Iterator<PharmancyComponent> iterator = pharmacy1;
-
-//        while (iterator.hasNext()){
-//            System.out.println(iterator.next());
-//        }
-
-//        while (((Iterator<PharmancyComponent>) pharmacy1).hasNext()) {
-//            System.out.println(((Iterator<PharmancyComponent>) pharmacy1).next());
-//        }
 
     }
 }
