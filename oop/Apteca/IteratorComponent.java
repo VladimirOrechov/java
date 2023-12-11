@@ -17,11 +17,13 @@ public class IteratorComponent implements Iterator<PharmacyComponent> {
         index = pharmacy.getIndex();
     }
     @Override
+    //  проверяет есть ли следующий эллемент
     public boolean hasNext() {
         index = pharmacy.getIndex();
         return index < components.size();
     }
     @Override
+    //  возвращаяет кконкретный компонент
     public PharmacyComponent next() {
         return components.get(index++);
     }
