@@ -18,11 +18,6 @@ public class Doctor {
         this.heal = heal;
     }
 
-    @Override
-    public String toString() {
-        return "Doctor [name=" + name + ", secondName=" + secondName + ", experience=" + experience + ", level=" + level
-        + ", heal=" + heal + "]";
-    }
     
     public void setName(String name) {
         this.name = name;
@@ -40,7 +35,7 @@ public class Doctor {
     public void setExperience(String experience) {
         this.experience = experience;
     }
-     public String getExperience() {
+    public String getExperience() {
         return experience;
     }
     public void setLevel(int level) {
@@ -57,5 +52,10 @@ public class Doctor {
     }
     public String getHeal() {
         return heal;
+    }
+    @Override
+    public String toString() {
+        return "Doctor [name=" + name + ", secondName=" + secondName + ", experience=" + experience + ", level=" + level
+        + ", heal=" + heal + "]";
     }
 }
