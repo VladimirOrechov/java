@@ -2,7 +2,7 @@ package oop;
 
 import java.time.LocalDate;
 
-public class Panther extends Animal{
+public class Panther extends Animal implements Goable, Speakble{
     
     public Panther(){
         super();
@@ -10,11 +10,16 @@ public class Panther extends Animal{
     public Panther(String name, Illness illness, String ownerName, LocalDate birthday){
         super(name, illness, ownerName, birthday);
     }
-    public void fly() {
-        System.out.println(getClass().getSimpleName() +  " I Cant Fly");
-    }
     @Override
     public String getName() {
         return name;
+    }
+    @Override
+    public void speak() {
+        System.out.println("speak rrrr");;
+    }
+    @Override
+    public void run() {
+        System.out.println("speed run 15.2");
     }
 }

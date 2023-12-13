@@ -5,7 +5,6 @@ import java.time.LocalDate;
  *  calss Animal
  */
 public abstract class Animal { 
-    private static final String Animal = null;
     protected String name;  
     protected Illness illness; // болезнь
     protected String ownerName;
@@ -30,7 +29,7 @@ public abstract class Animal {
 
     public void setName(String name) {
     this.name = name;
-}
+    }
     public Illness getIllness() {
         return illness;
     }

@@ -1,13 +1,14 @@
 package oop;
 
+
 import java.time.LocalDate;
 
-public class Fish extends Animal implements Swimable{
+public class Fish2 extends Animal implements Swimable{
     
-    public Fish(){
+    public Fish2(){
         super();
     }
-    public Fish(String name, Illness illness, String ownerName, LocalDate birthday){
+    public Fish2(String name, Illness illness, String ownerName, LocalDate birthday){
         super(name, illness, ownerName, birthday);
     }
     @Override
@@ -16,7 +17,6 @@ public class Fish extends Animal implements Swimable{
     }
     @Override
     public void sweem() {
-        System.out.println(" speed sweem 7.6");
+        System.out.println(" speed sweem 4.6");
     }
-
 }   

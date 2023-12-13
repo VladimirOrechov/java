@@ -2,7 +2,7 @@ package oop;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//  добавили список Animal
 public class VeterenaryClinic {
     private List<Animal> patients = new ArrayList<>();
     public List<Animal> getPatients() {
@@ -21,8 +21,39 @@ public class VeterenaryClinic {
         List<Goable> result = new ArrayList<>();
         //   спиок  имяСписка Массив по которому проходим
         for (Animal animal: patients) {
+                //      
             if(animal instanceof Goable) {
                 result.add((Goable)animal);
+            } 
+        }
+        return result;
+    }
+    public List<Speakble> getSpeakble() {
+        List<Speakble> result = new ArrayList<>();
+        //   спиок  имяСписка Массив по которому проходим
+        for (Animal animal: patients) {     
+            if(animal instanceof Speakble) {
+                result.add((Speakble)animal);
+            } 
+        }
+        return result;
+    }
+    public List<Flyable> getFlyable() {
+        List<Flyable> result = new ArrayList<>();
+        //   спиок  имяСписка Массив по которому проходим
+        for (Animal animal: patients) {      
+            if(animal instanceof Flyable) {
+                result.add((Flyable)animal);
+            } 
+        }
+        return result;
+    }
+    public List<Swimable> getSwimable() {
+        List<Swimable> result = new ArrayList<>();
+        //   спиок  имяСписка Массив по которому проходим
+        for (Animal animal: patients) { 
+            if(animal instanceof Swimable) {
+                result.add((Swimable)animal);
             } 
         }
         return result;
