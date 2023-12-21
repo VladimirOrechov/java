@@ -6,5 +6,4 @@ public interface LinList<E> {
     E get(int index);
     int getSize();
     int getIndex();
-    
 }

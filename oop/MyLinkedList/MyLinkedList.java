@@ -2,23 +2,28 @@ package oop.MyLinkedList;
 
 import java.util.LinkedList;
 
-import org.w3c.dom.Node;
-
 public class MyLinkedList<E> implements LinList{
 
     private E[] values;
     private int getSize;
     private int count;
 
+    /**
+     * @param e
+     * @return
+     */
     @Override
-    public LinList<E> addFirst(E item) {
- 
-        
+    public LinList<E> addFirst(E e) {
+            return addFirst(e);
     }
 
+    /**
+     * @param e
+     * @return
+     */
     @Override
-    public LinList<E> addLast(E item) {
-        
+    public LinList<E> addLast(E e) {
+        return addLast(e);
     }
 
     @Override
