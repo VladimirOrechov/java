@@ -2,7 +2,6 @@ package oop.MyLinkedList;
 
 public class MyLinkedList<E> implements LInList<E> {
 
-
 public static void main(String[] args) {
     MyLinkedList<String> stringLinked = new MyLinkedList<String>();
     stringLinked.addFirst("asd");
