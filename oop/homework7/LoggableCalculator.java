@@ -1,5 +1,7 @@
-public class LoggableCalculato implements Calculable {
+public class LoggableCalculator implements Calculable {
+    
     protected Calculable calc;
+
     Loggable calcLogger = new CalcLogger();
 
 
